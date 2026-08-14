@@ -10,6 +10,8 @@ import DashboardPage from './pages/dashboard/DashboardPage';
 import AdminDashboardPage from './pages/admin/AdminDashboardPage';
 import DocumentsPage from './pages/documents/DocumentsPage';
 import ChatPage from './pages/chat/ChatPage';
+import QuizListPage from './pages/quiz/QuizListPage';
+import QuizAttemptPage from './pages/quiz/QuizAttemptPage';
 
 function App() {
   return (
@@ -25,7 +27,8 @@ function App() {
             {/* Pages temporaires pour les autres routes du menu pour éviter les 404 */}
             <Route path="/documents" element={<DocumentsPage />} />
             <Route path="/chat" element={<ChatPage />} />
-            <Route path="/quizzes" element={<div style={{padding: '24px'}}>Quiz (Phase 5)</div>} />
+            <Route path="/quizzes" element={<QuizListPage />} />
+            <Route path="/quizzes/:id" element={<QuizAttemptPage />} />
             <Route path="/progress" element={<div style={{padding: '24px'}}>Progression (Phase 6)</div>} />
             <Route path="/notifications" element={<div style={{padding: '24px'}}>Notifications (Phase 7)</div>} />
             <Route path="/profile" element={<div style={{padding: '24px'}}>Profil</div>} />
